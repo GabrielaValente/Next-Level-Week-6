@@ -3,7 +3,7 @@
     padding: 0;
     border: none;
     text-decoration: none;
-    box-sizing: border;
+    box-sizing: border-box;
 
 }
 
@@ -20,9 +20,10 @@ html {
     --grey-dark: #4D5E77;
     --grey-blue: #A1B2CD;
     --grey-light: #E5EAF1;
+    --grey-medium: #EAECF2;
 
-    /* 1rem = 16px (User Agente) 100% (User Agent) 28px - 2.8rem */
-    font-size: 62.5% /*10px*/
+    /* 1rem = 16px (User Agent) 100% (User Agent) 28px - 2.8rem */
+    font-size: 62.5% 
 
 }
 
@@ -35,6 +36,7 @@ body {
 body, button, input, textarea{
     /* Clamp- intervalo de tamanho, mínimo, padrão e máximo de tamanho*/
     font-size: clamp(14px, 1.6rem, 2vw);
+    
     font-family: 'Open Sans', sans-serif;
     /*font-family: 'Poppins', sans-serif;*/
 }
@@ -84,7 +86,7 @@ button:hover, .button:hover{
     filter: brightness(1.2);
 }
 
-button > img
+button > img,
 .button > img{
     margin-right: 1rem;
     width: 2rem;
@@ -96,6 +98,22 @@ button.outlined,
     color: var(--blue);
     border: .2rem solid var(--blue);
 }
+
+button.red,
+.button.red{
+    background: var(--red);
+    color: var(--white);
+}
+
+button.grey,
+.button.grey{
+    background: var(--grey-light);
+    color: var(--grey-dark);
+}
+
+
+
+/** HEADER**/
 
 .content header{
     width: 80%;  
